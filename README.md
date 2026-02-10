@@ -1,34 +1,54 @@
+# Electric Vehicle Resale Prediction 🚗⚡
 
-# Electric Vehicle Resale Prediction
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/go830305-cripto/electric-vehicle-resale-prediction/blob/main/notebooks/electric-vehicle-resale-prediction.ipynb)
+[![Python Version](https://img.shields.io/badge/python-3.10+-blue?logo=python)](https://www.python.org/)
+[![GitHub last commit](https://img.shields.io/github/last-commit/go830305-cripto/electric-vehicle-resale-prediction)](https://github.com/go830305-cripto/electric-vehicle-resale-prediction/commits/main)
+[![GitHub issues](https://img.shields.io/github/issues/go830305-cripto/electric-vehicle-resale-prediction)](https://github.com/go830305-cripto/electric-vehicle-resale-prediction/issues)
+[![GitHub license](https://img.shields.io/github/license/go830305-cripto/electric-vehicle-resale-prediction)](https://github.com/go830305-cripto/electric-vehicle-resale-prediction/blob/main/LICENSE)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/go830305-cripto/electric-vehicle-resale-prediction/blob/main/notebooks/electric-vehicle-resale-prediction.ipynb)
+---
+
+## 📑 Tabela de Conteúdo
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Tecnologias](#-tecnologias)
+- [Estrutura do Repositório](#-estrutura-do-repositório)
+- [Instalação](#-instalação)
+- [Como Usar](#-como-usar)
+- [Exemplo Rápido](#-exemplo-rápido)
+- [Contribuição](#-contribuição)
+- [Contato](#-contato)
+- [Licença](#-licença)
+
+---
 
 ## 🚀 Sobre o Projeto
-Este projeto usa Machine Learning para prever o valor de revenda de veículos elétricos com base em atributos como bateria, autonomia, preço inicial, etc.
+Este projeto utiliza **Machine Learning** para prever o **valor de revenda de veículos elétricos** com base em atributos como bateria, autonomia, preço inicial, entre outros.  
 
-O objetivo é auxiliar compradores e vendedores a estimar o valor de revenda de veículos elétricos de forma precisa usando dados históricos e modelos de aprendizado de máquina.
+O objetivo é fornecer uma ferramenta confiável para **compradores e vendedores estimarem o valor de revenda**, usando dados históricos e modelos de aprendizado de máquina.  
+
+Este projeto é ideal para:  
+- Portfólio de ciência de dados / ML  
+- Teste de modelos preditivos em datasets reais  
+- Colaboração em projetos de veículos elétricos  
 
 ---
 
 ## 📊 Tecnologias
-- Python 3.10+
-- pandas, numpy, scikit-learn
-- matplotlib, seaborn
-- xgboost (opcional)
-- Jupyter Notebook
+- Python 3.10+  
+- Pandas, Numpy, Scikit-learn  
+- Matplotlib, Seaborn  
+- XGBoost (opcional)  
+- Jupyter Notebook  
 
 ---
 
 ## 🏗️ Estrutura do Repositório
-```
+data/ # Dataset usado no projeto
+notebooks/ # Notebooks de análise e modelos
+README.md # Este arquivo
+requirements.txt # Dependências do projeto
+.gitignore # Arquivos ignorados pelo Git
 
-data/                  # Dataset usado no projeto
-notebooks/             # Notebooks de análise e modelos
-README.md              # Este arquivo
-requirements.txt       # Dependências do projeto
-.gitignore             # Arquivos ignorados pelo Git
-
-````
 
 ---
 
@@ -37,11 +57,8 @@ requirements.txt       # Dependências do projeto
 ```bash
 git clone https://github.com/go830305-cripto/electric-vehicle-resale-prediction.git
 cd electric-vehicle-resale-prediction
-````
+Crie e ative o ambiente virtual:
 
-2. Crie e ative o ambiente virtual:
-
-```bash
 # macOS / Linux
 python3 -m venv env
 source env/bin/activate
@@ -49,38 +66,42 @@ source env/bin/activate
 # Windows
 python -m venv env
 env\Scripts\activate
-```
+Instale as dependências:
 
-3. Instale as dependências:
-
-```bash
 pip install -r requirements.txt
-```
+📊 Como Usar
+Abra o notebook principal:
+📓 electric-vehicle-resale-prediction.ipynb
 
----
+O dataset está localizado em:
+data/electric_vehicle_analytics.csv
 
-## 📊 Como usar
+Execute as células para reproduzir a análise, treinar modelos e prever o valor de revenda.
 
-Abra o notebook `notebooks/electric-vehicle-resale-prediction.ipynb` (VS Code ou Jupyter Notebook) e execute as células para reproduzir a análise e o modelo de previsão.
-O dataset está em `data/electric_vehicle_analytics.csv`.
+⚙️ Exemplo Rápido
+from sklearn.ensemble import RandomForestRegressor
+import pandas as pd
 
----
+# Carregar dataset
+df = pd.read_csv("data/electric_vehicle_analytics.csv")
 
-## ⚙️ Dependências
+# Separar features e target
+X = df.drop("resale_value", axis=1)
+y = df["resale_value"]
 
-* pandas
-* numpy
-* scikit-learn
-* matplotlib
-* seaborn
-* xgboost
+# Treinar modelo simples
+model = RandomForestRegressor()
+model.fit(X, y)
 
----
+# Prever os 5 primeiros valores
+preds = model.predict(X.head())
+print(preds)
+🤝 Contribuição
+Contribuições são bem-vindas!
 
-## 🔗 Contato
 
-* GitHub: [go830305-cripto](https://github.com/go830305-cripto)
+🔗 Contato
+GitHub: go830305-cripto
 
-```
+Email: go830305@gmai.com
 
--
