@@ -1,8 +1,4 @@
-Perfeito! Aqui está uma **versão final e organizada do README.md**, pronta para você **copiar e colar** no seu repositório:
 
----
-
-```markdown
 # Electric Vehicle Resale Prediction
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/go830305-cripto/electric-vehicle-resale-prediction/blob/main/notebooks/electric-vehicle-resale-prediction.ipynb)
